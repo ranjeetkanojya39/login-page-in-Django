@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<h2>Form Submitted Successfully!</h2>
+
+<p><strong>Phone:</strong> {{ phone }}</p>
+<p><strong>Email:</strong> {{ email }}</p>
+<p><strong>Message:</strong> {{ message }}</p>
+
+<a href="/login/" class="btn btn-primary mt-3">Back to Login</a>
+
+
+{% endblock %}

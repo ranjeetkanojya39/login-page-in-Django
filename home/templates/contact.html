@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %} <a href="/" class="btn btn-outline-primary mb-4">
+← Back to Login </a>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+        <div class="card shadow-lg p-4 border-0" style="border-radius: 15px;">
+
+```
+        <h3 class="text-center mb-4 text-primary fw-bold">Contact Us</h3>
+        <p class="text-center text-muted mb-4">
+            We’d love to hear from you! Send us your message.
+        </p>
+
+        {% if success %}
+            <div class="alert alert-success text-center fw-semibold">
+                ✅ Message sent successfully!
+            </div>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Phone Number</label>
+                <input name="phone" type="text" class="form-control form-control-lg"
+                       placeholder="Enter phone number">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Email Address</label>
+                <input name="email" type="email" class="form-control form-control-lg"
+                       placeholder="yourname@example.com">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Message</label>
+                <textarea name="message" class="form-control form-control-lg" rows="4"
+                          placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button class="btn btn-primary w-100 btn-lg mt-2" style="border-radius: 10px;">
+                Send Message
+            </button>
+
+        </form>
+    </div>
+</div>
+```
+
+</div>
+{% endblock %}
