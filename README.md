@@ -25,6 +25,8 @@ SQLite3
 1️⃣ Clone the repository
 git clone https://github.com/ranjeetkanojiya39/login-page-in-Django.git
 
+http://127.0.0.1:8000/
+
 2️⃣ Create virtual environment
 python -m venv env
 
